@@ -23,7 +23,7 @@ public class SpaceShipFactory {
 				System.out.println("Illegal ship types");
 			}
 		}
-		return (SpaceShip[]) ships.toArray();
+		return (ships.toArray(new SpaceShip[args.length]));
 	}
 
 }

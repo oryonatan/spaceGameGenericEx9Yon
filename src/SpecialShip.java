@@ -1,7 +1,7 @@
 import java.awt.Image;
 
 
-public class SpecialShip extends SpaceShip {
+public class SpecialShip extends ComputerShip {
 
 	@Override
 	public void doSpecificAction(SpaceWars game) {
@@ -9,10 +9,5 @@ public class SpecialShip extends SpaceShip {
 
 	}
 
-	@Override
-	public Image getImage() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

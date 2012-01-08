@@ -17,13 +17,15 @@ public abstract class SpaceShip {
 	private static final int STARTING_HEALTH = 10;
 	private static final int STARTING_ENERGY = 200;
 	private static final int TEL_ENERGY = 150;
+	protected static final int LEFT = 1;
+	protected static final int RIGHT = -1;
 	/**
 	 * The position and physics of the ship.
 	 */
-	private SpaceShipPhysics pos;
-	private boolean shieldsUp;
-	private int health;
-	private int energy;
+	protected SpaceShipPhysics pos;
+	protected boolean shieldsUp;
+	protected int health;
+	protected int energy;
 
 	public SpaceShip() {
 		reset();
