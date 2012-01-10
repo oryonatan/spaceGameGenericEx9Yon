@@ -61,6 +61,7 @@ public abstract class SpaceShip {
 	 */
 	public void doAction(SpaceWars game) {
 		shotsTurnCounter--;
+		shieldsUp = false;
 		doSpecificAction(game);
 		energy++;
 	}
