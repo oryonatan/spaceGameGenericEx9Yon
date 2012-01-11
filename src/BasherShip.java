@@ -1,13 +1,11 @@
-import java.awt.Image;
-
-
 public class BasherShip extends ComputerShip {
 
 	@Override
 	public void doSpecificAction(SpaceWars game) {
-		// TODO Auto-generated method stub
-
+		SpaceShip otherShip = game.getClosestShipTo(this);
+		moveInteract(otherShip, Interaction.pursue);
+		if (otherShip.getPhysics().distanceFrom(pos) <= SMALL_DISTANCE) {
+			activateShield();
+		}
 	}
-
-
 }

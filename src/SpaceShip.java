@@ -1,7 +1,6 @@
 import intro.ex9.*;
 
 import java.awt.Image;
-import java.awt.image.*;
 
 /**
  * The API spaceships need to implement for the SpaceWars game. It is your
@@ -11,14 +10,15 @@ import java.awt.image.*;
 
 public abstract class SpaceShip {
 	private static final int SHIELD_COST = 3;
-	private static final int SHOT_ENERGY = 25;
-	private int shotsTurnCounter = 0;
+	protected static final int SHOT_ENERGY = 25;
+	protected int shotsTurnCounter = 0;
 	private static final int SHOTS_DELAY = 8;
 	private static final int STARTING_HEALTH = 10;
 	private static final int STARTING_ENERGY = 200;
 	private static final int TEL_ENERGY = 150;
 	protected static final int LEFT = 1;
 	protected static final int RIGHT = -1;
+	protected static final int FORWARD = 0;
 	/**
 	 * The position and physics of the ship.
 	 */
@@ -31,6 +31,9 @@ public abstract class SpaceShip {
 		reset();
 	}
 
+	
+	
+	
 	/**
 	 * This method is called every time a collision with this ship occurs.
 	 */
@@ -129,13 +132,12 @@ public abstract class SpaceShip {
 	/**
 	 * 
 	 */
-	public void fire(SpaceWars game) {
+	protected void fire(SpaceWars game) {
 		if (energy >= SHOT_ENERGY && shotsTurnCounter <= 0) {
 			game.addShot(pos);
 			energy -= SHOT_ENERGY;
 			shotsTurnCounter = SHOTS_DELAY;
 		}
-
 	}
 
 	/**

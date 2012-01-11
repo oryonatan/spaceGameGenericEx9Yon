@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,15 +14,15 @@ public class SpaceShipFactory {
 		shipTypes.put("a", AggressiveShip.class);
 		shipTypes.put("s", SpecialShip.class);
 		
-		ArrayList<SpaceShip> ships = new ArrayList<SpaceShip>();
-		for (String spaceShip : args) {
+		SpaceShip[] ships = new SpaceShip[args.length];
+		for (int i = 0 ; i < args.length ; i ++) {
 			try {
-				ships.add(shipTypes.get(spaceShip).newInstance());
+				ships[i] = (shipTypes.get(args[i]).newInstance());
 			} catch (Exception e) {
 				System.out.println("Illegal ship types");
 			}
 		}
-		return (ships.toArray(new SpaceShip[args.length]));
+		return ships;
 	}
 
 }

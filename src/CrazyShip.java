@@ -1,4 +1,3 @@
-import java.io.RandomAccessFile;
 import java.util.Random;
 
 
@@ -7,12 +6,11 @@ public class CrazyShip extends HumanShip {
 
 	@Override
 	public void doSpecificAction(SpaceWars game) {
-		// TODO Random teleport
 		Random rand = new Random(); 
+		System.out.println(rand.nextDouble());
 		if (rand.nextDouble() <= TELEPORT_RANDOM){
 			Teleport();
 		}
-		// TODO Auto-generated method stub
 		super.doSpecificAction(game);
 	}
 }
