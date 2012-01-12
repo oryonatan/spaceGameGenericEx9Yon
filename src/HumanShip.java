@@ -2,13 +2,21 @@ import intro.ex9.GameGUI;
 
 import java.awt.Image;
 
+/** Human player ship extends the spaceship with support for user input. 
+ * @author yonatan , idanb
+ *
+ */
 public class HumanShip extends SpaceShip {
 	
+	/* (non-Javadoc)
+	 * @see SpaceShip#doSpecificAction(SpaceWars)
+	 */
 	@Override
 	public void doSpecificAction(SpaceWars game) {
 		GameGUI gui = game.getGUI();
 		int direction = FORWARD ;
 		boolean accelerate = false;
+		//Handle input from the user 
 		if (gui.isTPressed()) {
 			Teleport();
 		}
@@ -21,7 +29,9 @@ public class HumanShip extends SpaceShip {
 		if (gui.isUpPressed()) {
 			accelerate =true ;
 		}
+		//Move with the given input
 		pos.move(accelerate, direction);
+		
 		if (gui.isSPressed()) {
 			activateShield();
 		}
@@ -30,6 +40,9 @@ public class HumanShip extends SpaceShip {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see SpaceShip#getImage()
+	 */
 	@Override
 	public Image getImage() {
 		if (shieldsUp) {

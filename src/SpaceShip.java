@@ -9,13 +9,13 @@ import java.awt.Image;
  */
 
 public abstract class SpaceShip {
-	private static final int SHIELD_COST = 3;
-	protected static final int SHOT_ENERGY = 25;
-	protected int shotsTurnCounter = 0;
-	protected static final int SHOTS_DELAY = 8;
+	private static final int SHIELD_ENERGY = 3;
+	private static final int SHOT_ENERGY = 25;
+	private static final int TEL_ENERGY = 150;
+	protected static int shotsTurnCounter = 0;
+	private static final int SHOTS_DELAY = 8;
 	private static final int STARTING_HEALTH = 10;
 	private static final int STARTING_ENERGY = 200;
-	private static final int TEL_ENERGY = 150;
 	protected static final int LEFT = 1;
 	protected static final int RIGHT = -1;
 	protected static final int FORWARD = 0;
@@ -27,28 +27,29 @@ public abstract class SpaceShip {
 	protected int health;
 	protected int energy;
 
+	/**
+	 * Ctor for the space ships , calls reset , sets random position and maximum
+	 * helath/energy
+	 * 
+	 */
 	public SpaceShip() {
 		reset();
 	}
 
-	
-	
-	
 	/**
-	 * This method is called every time a collision with this ship occurs.
+	 * This method is called every time a collision with this ship occurs. if
+	 * shield is up , nothing will happen
 	 */
 	public void collidedWithAnotherShip() {
 		if (!shieldsUp) {
 			health--;
 		}
 	}
-
-	public void Accelerate(){
-		}
 	
 	/**
 	 * Does the specific action of the ship (To be implemented by each
-	 * spaceship)
+	 * spaceship) all specific behavior of the ship (such as movement , shooting etc.)
+	 * should be implemented here.
 	 * 
 	 * @param game
 	 *            The game controller.
@@ -57,7 +58,11 @@ public abstract class SpaceShip {
 
 	/**
 	 * Does the actions of this ship for this round. This is called once per
-	 * round by the SpaceWars game driver.
+	 * round by the SpaceWars game driver. 
+	 * The method by itself only lowers the shoot delay counter , turns of the shield and then 
+	 * Calls the doSpecificAction(game) method of the ship which handles the special behavior 
+	 * of each ship , such * as moving , shooting etc.
+	 * After this is done - energy is replenished
 	 * 
 	 * @param game
 	 *            the game object to which this ship belongs.
@@ -72,7 +77,7 @@ public abstract class SpaceShip {
 	/**
 	 * Gets the image of this ship. This method should return the image of the
 	 * ship with or without the shield. This will be displayed on the GUI at the
-	 * end of the round.
+	 * end of the round
 	 * 
 	 * @return the image of the ship.
 	 */
@@ -119,17 +124,18 @@ public abstract class SpaceShip {
 	}
 
 	/**
-	 * Activates the shield
+	 * Activates the shield (if there is enough energy)
 	 * 
 	 */
 	public void activateShield() {
-		if (energy >= SHIELD_COST) {
+		if (energy >= SHIELD_ENERGY) {
 			shieldsUp = true;
-			energy -= SHIELD_COST;
+			energy -= SHIELD_ENERGY;
 		}
 	}
 
 	/**
+	 * Fires the main cannon in the direction of pos
 	 * 
 	 */
 	protected void fire(SpaceWars game) {

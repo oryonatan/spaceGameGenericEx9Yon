@@ -1,16 +1,21 @@
 import java.util.Random;
 
-
 public class CrazyShip extends HumanShip {
 	private static final double TELEPORT_RANDOM = 0.02;
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see HumanShip#doSpecificAction(SpaceWars)
+	 */
 	@Override
 	public void doSpecificAction(SpaceWars game) {
-		Random rand = new Random(); 
-		System.out.println(rand.nextDouble());
-		if (rand.nextDouble() <= TELEPORT_RANDOM){
+		// 2 Precent chance random
+		Random rand = new Random();
+		if (rand.nextDouble() <= TELEPORT_RANDOM) {
 			Teleport();
 		}
+		// Act as human
 		super.doSpecificAction(game);
 	}
 }

@@ -5,10 +5,7 @@
  */
 public class AggressiveShip extends ComputerShip {
 
-	/*
-	 * Pursues closest ship and attempts to shoot it if the angle to the other
-	 * ship is smaller then SMALL_ANGLE
-	 * 
+	/* (non-Javadoc)
 	 * @see SpaceShip#doSpecificAction(SpaceWars)
 	 */
 	@Override
