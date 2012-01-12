@@ -12,7 +12,7 @@ public abstract class SpaceShip {
 	private static final int SHIELD_COST = 3;
 	protected static final int SHOT_ENERGY = 25;
 	protected int shotsTurnCounter = 0;
-	private static final int SHOTS_DELAY = 8;
+	protected static final int SHOTS_DELAY = 8;
 	private static final int STARTING_HEALTH = 10;
 	private static final int STARTING_ENERGY = 200;
 	private static final int TEL_ENERGY = 150;

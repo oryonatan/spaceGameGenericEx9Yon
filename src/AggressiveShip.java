@@ -1,11 +1,24 @@
+/**
+ * AggressiveShip , pursue enemy and attemp to shoot him
+ * 
+ * @author yonatan idanb
+ */
 public class AggressiveShip extends ComputerShip {
 
+	/*
+	 * Pursues closest ship and attempts to shoot it if the angle to the other
+	 * ship is smaller then SMALL_ANGLE
+	 * 
+	 * @see SpaceShip#doSpecificAction(SpaceWars)
+	 */
 	@Override
 	public void doSpecificAction(SpaceWars game) {
 		SpaceShip otherShip = game.getClosestShipTo(this);
+		// Pursue
 		moveInteract(otherShip, Interaction.pursue);
-		if (pos.angleTo(otherShip.getPhysics()) <= Math.abs(SMALL_ANGLE)){
+		// Get angle and shoot if good
+		if (pos.angleTo(otherShip.getPhysics()) <= Math.abs(SMALL_ANGLE)) {
 			fire(game);
-		}		
+		}
 	}
 }
