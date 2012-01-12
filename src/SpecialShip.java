@@ -24,7 +24,7 @@ public class SpecialShip extends ComputerShip {
 	public void doSpecificAction(SpaceWars game) {
 		pos.move(true, LEFT);
 		//Direct all cannons
-		double angleDif = Math.PI / 3;
+		double angleDif = Math.PI / 3 ;
 		for (int i = 0; i < cannonsPhysics.length; i++) {
 			cannonsPhysics[i].setAngle(pos.getAngle() + angleDif * (i + 1));
 			cannonsPhysics[i].setLocation(pos.getX(), pos.getY());
