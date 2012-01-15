@@ -1,10 +1,10 @@
 /**
  * FILE : SpaceShip.java
  * WRITER : Idan Brodet + idanbr2 + 300685278
- * WRITER : Yonatan Oren
+ * WRITER : Yonatan Oren + oryonatan + 300704327
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
- * 
+ * Abstract class for all the space ships.
  */
 import intro.ex9.*;
 import java.awt.Image;
@@ -31,7 +31,7 @@ public abstract class SpaceShip {
 
 	/**
 	 * Ctor for the space ships , calls reset , sets random position and maximum
-	 * health/energy
+	 * health/energy.
 	 * 
 	 */
 	public SpaceShip() {
@@ -40,7 +40,7 @@ public abstract class SpaceShip {
 
 	/**
 	 * This method is called every time a collision with this ship occurs. if
-	 * shield is up , nothing will happen
+	 * shield is up , nothing will happen.
 	 */
 	public void collidedWithAnotherShip() {
 		if (!shieldsUp) {
@@ -62,8 +62,7 @@ public abstract class SpaceShip {
 	 * The method by itself only lowers the shoot delay counter , turns of the shield and then 
 	 * Calls the doSpecificAction(game) method of the ship which handles the special behavior 
 	 * of each ship , such * as moving , shooting etc.
-	 * After this is done - energy is replenished
-	 * 
+	 * After this is done - energy is replenished.
 	 * @param game The game object to which this ship belongs.
 	 */
 	public void doAction(SpaceWars game) {
@@ -76,7 +75,7 @@ public abstract class SpaceShip {
 	/**
 	 * Gets the image of this ship. This method should return the image of the
 	 * ship with or without the shield. This will be displayed on the GUI at the
-	 * end of the round
+	 * end of the round.
 	 * @return The image of the ship.
 	 */
 	public abstract Image getImage();
@@ -120,7 +119,7 @@ public abstract class SpaceShip {
 	}
 
 	/**
-	 * Activates the shield (if there is enough energy)
+	 * Activates the shield (if there is enough energy).
 	 */
 	public void activateShield() {
 		if (energy >= SHIELD_ENERGY) {
@@ -130,7 +129,7 @@ public abstract class SpaceShip {
 	}
 
 	/**
-	 * Fires the main cannon in the direction of pos
+	 * Fires the main cannon in the direction of pos.
 	 */
 	protected void fire(SpaceWars game) {
 		if (energy >= SHOT_ENERGY && shotsTurnCounter <= 0) {
@@ -141,7 +140,7 @@ public abstract class SpaceShip {
 	}
 
 	/**
-	 * Teleports the ship
+	 * Teleports the ship.
 	 */
 	public void Teleport() {
 		if (energy >= TEL_ENERGY) {

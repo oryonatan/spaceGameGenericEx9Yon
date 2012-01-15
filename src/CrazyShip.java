@@ -1,7 +1,7 @@
 /** 
  * FILE : CrazyShip.java
  * WRITER : Idan Brodet + idanbr2 + 300685278
- * WRITER : Yonatan Oren
+ * WRITER : Yonatan Oren + oryonatan + 300704327
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
  * Crazy ship, the same as human controlled but in addition in each

@@ -1,7 +1,7 @@
 /** 
  * FILE : HumanShip.java
  * WRITER : Idan Brodet + idanbr2 + 300685278
- * WRITER : Yonatan Oren
+ * WRITER : Yonatan Oren + oryonatan + 300704327
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
  * Human player ship, extends the spaceship with support for user input.
@@ -20,12 +20,12 @@ public class HumanShip extends SpaceShip {
 		GameGUI gui = game.getGUI();
 		int direction = FORWARD ;
 		boolean accelerate = false;
-		//Handle input from the user 
+		// Handle input from the user 
 		if (gui.isTPressed()) {	Teleport(); }
 		if (gui.isLeftPressed()) { direction = LEFT; }
 		else if (gui.isRightPressed()) { direction = RIGHT; }
 		if (gui.isUpPressed()) { accelerate =true ; }
-		//Move with the given input
+		// Move with the given input
 		pos.move(accelerate, direction);		
 		if (gui.isSPressed()) { activateShield(); }
 		if (gui.isDPressed()) { fire(game);	}

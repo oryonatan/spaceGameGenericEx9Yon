@@ -1,7 +1,7 @@
 /**
  * FILE : SpaceShipFactory.java
  * WRITER : Idan Brodet + idanbr2 + 300685278
- * WRITER : Yonatan Oren
+ * WRITER : Yonatan Oren + oryonatan + 300704327
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
  * Factory for spaceships , has a single method that gets the user string and
@@ -13,9 +13,9 @@ import java.util.Map;
 public class SpaceShipFactory {
 
 	/**
-	 * Creates a list of spaceships 
-	 * @param args From user args
-	 * @return A list of spaceships
+	 * Creates a list of spaceships.
+	 * @param args From user args.
+	 * @return A list of spaceships.
 	 */
 	public static SpaceShip[] createSpaceShips(String[] args) {
 		// Map ship classes to string

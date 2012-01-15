@@ -1,7 +1,7 @@
 /** 
  * FILE : ComputerShip.java
  * WRITER : Idan Brodet + idanbr2 + 300685278
- * WRITER : Yonatan Oren
+ * WRITER : Yonatan Oren + oryonatan + 300704327
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
  * Abstract class for all the computer ships.
@@ -13,7 +13,7 @@ import java.awt.Image;
 public abstract class ComputerShip extends SpaceShip {
 	
 	/**
-	 * Types of movement interactions can be escape, or pursue
+	 * Types of movement interactions can be escape, or pursue.
 	 */
 	protected enum Interaction {
 		escape, pursue
@@ -34,8 +34,8 @@ public abstract class ComputerShip extends SpaceShip {
 	}
 
 	/**
-	 * Moves the ship with an interaction relative to another ship
-	 * @param otherShip The ship to interact with
+	 * Moves the ship with an interaction relative to another ship.
+	 * @param otherShip The ship to interact with.
 	 * @param action The type of interaction : pursue or escape.
 	 */
 	protected void moveInteract(SpaceShip otherShip, Interaction action) {

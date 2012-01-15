@@ -1,7 +1,7 @@
 /** 
  * FILE : RunnerShip.java
  * WRITER : Idan Brodet + idanbr2 + 300685278
- * WRITER : Yonatan Oren
+ * WRITER : Yonatan Oren + oryonatan + 300704327
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
  * Runner ship, tries to run away from combat and teleport if being aimed at.

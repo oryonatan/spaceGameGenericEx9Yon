@@ -1,7 +1,7 @@
 /** 
  * FILE : ExtendablePhysics.java
  * WRITER : Idan Brodet + idanbr2 + 300685278
- * WRITER : Yonatan Oren
+ * WRITER : Yonatan Oren + oryonatan + 300704327
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
  * Extension to the physics , allows interaction with the location of the 
@@ -12,8 +12,8 @@ import intro.ex9.SpaceShipPhysics;
 public class ExtendablePhysics extends SpaceShipPhysics {
 	
 	/**
-	 * Sets the angle to a given angle
-	 * @param angle the angle to set to
+	 * Sets the angle to a given angle.
+	 * @param angle The angle to set to.
 	 */
 	protected void setAngle(double angle) {
 		_angle = angle;
@@ -21,8 +21,8 @@ public class ExtendablePhysics extends SpaceShipPhysics {
 	
 	/**
 	 * Changes the location of the physics object
-	 * @param x the x value to put
-	 * @param y the y value to put
+	 * @param x The x value to put.
+	 * @param y The y value to put.
 	 */
 	protected void setLocation(double x,double y){
 		_x = x;
