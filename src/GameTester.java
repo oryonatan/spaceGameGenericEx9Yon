@@ -69,7 +69,6 @@ private static final int MAX_HEALTH = 10;
 		if (!enterprise.isDead()) {
 			reportError(SHIP_NOT_DEAD_COLLISIONS, ErrorTypes.normalError);
 		}
-
 	}
 
 	private void testPhysics() {
