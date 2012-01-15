@@ -10,6 +10,7 @@ import intro.ex9.*;
 import java.awt.Image;
 
 public abstract class SpaceShip {
+	
 	private static final int SHIELD_ENERGY = 3;
 	private static final int SHOT_ENERGY = 25;
 	private static final int TEL_ENERGY = 150;

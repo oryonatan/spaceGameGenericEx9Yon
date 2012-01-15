@@ -10,6 +10,7 @@
 import intro.ex9.SpaceShipPhysics;
 
 public class SpecialShip extends ComputerShip {
+	
 	private static final int SHOTS_DELAY = 24;
 	
 	/**
