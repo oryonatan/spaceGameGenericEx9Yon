@@ -1,16 +1,14 @@
-
-
-import java.util.Iterator;
-
-import intro.ex9.SpaceShipPhysics;
-
-
 public class GameTester {
+private static final String EXPHY_ANGLE_WRONG = "Extended physics Angle is wrong";
+private static final String EXPHY_Y_WRONG = "Extended physics x is wrong";
+private static final String EXPHY_X_WRONG = "Extended physics x is wrong";
 private static final String SHIP_NOT_DEAD_COLLISIONS = "Ship did not die after 10 collisions";;
 private static final String SHIP_NOT_DEAD_SHOTS = "Ship did not die after 10 shots";
 private static final int STACK_CALLING_FUNCTION_LOCATION = 2;
 private static final String NORMAL_REPORT =  "Error in :%s\n%s";
 private static final int MAX_HEALTH = 10;
+
+
  
 	/**
 	 * @param args
@@ -72,7 +70,18 @@ private static final int MAX_HEALTH = 10;
 	}
 
 	private void testPhysics() {
-		
+		ExtendablePhysics exPhy =  new ExtendablePhysics();
+		exPhy.setLocation(0, 0);
+		if(exPhy.getX()!= 0){
+			reportError(EXPHY_X_WRONG, ErrorTypes.normalError);
+		}
+		if(exPhy.getY()!= 0){
+			reportError(EXPHY_Y_WRONG, ErrorTypes.normalError);
+		}		
+		exPhy.setAngle(0);
+		if(exPhy.getAngle()!= 0){
+			reportError(EXPHY_ANGLE_WRONG, ErrorTypes.normalError);
+		}		
 		
 	}
 
