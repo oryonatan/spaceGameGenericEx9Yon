@@ -10,6 +10,7 @@
 import java.util.Random;
 
 public class CrazyShip extends HumanShip {
+	
 	private static final double TELEPORT_RANDOM = 0.02;
 
 	/**

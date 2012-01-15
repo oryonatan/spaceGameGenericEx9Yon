@@ -1,5 +1,5 @@
 /**
- * FILE : RunnerShip.java
+ * FILE : SpaceShipFactory.java
  * WRITER : Idan Brodet + idanbr2 + 300685278
  * WRITER : Yonatan Oren
  * EXERCISE : intro2cs ex9 2011-2012  

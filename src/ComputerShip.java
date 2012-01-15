@@ -1,5 +1,5 @@
 /** 
- * FILE : BasherShip.java
+ * FILE : ComputerShip.java
  * WRITER : Idan Brodet + idanbr2 + 300685278
  * WRITER : Yonatan Oren
  * EXERCISE : intro2cs ex9 2011-2012  
@@ -11,6 +11,7 @@ import intro.ex9.SpaceShipPhysics;
 import java.awt.Image;
 
 public abstract class ComputerShip extends SpaceShip {
+	
 	/**
 	 * Types of movement interactions can be escape, or pursue
 	 */
