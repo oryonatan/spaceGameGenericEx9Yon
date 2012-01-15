@@ -1,18 +1,19 @@
-import intro.ex9.*;
-
-import java.awt.Image;
-
 /**
- * The API spaceships need to implement for the SpaceWars game. It is your
- * decision whether SpaceShip.java will be an interface, an abstract class, a
- * base class for the other spaceships or any other option you will choose.
+ * FILE : SpaceShip.java
+ * WRITER : Idan Brodet + idanbr2 + 300685278
+ * WRITER : Yonatan Oren
+ * EXERCISE : intro2cs ex9 2011-2012  
+ * DESCRIPTION:
+ * 
  */
+import intro.ex9.*;
+import java.awt.Image;
 
 public abstract class SpaceShip {
 	private static final int SHIELD_ENERGY = 3;
 	private static final int SHOT_ENERGY = 25;
 	private static final int TEL_ENERGY = 150;
-	protected static int shotsTurnCounter = 0;
+	protected int shotsTurnCounter = 0;
 	private static final int SHOTS_DELAY = 8;
 	private static final int STARTING_HEALTH = 10;
 	private static final int STARTING_ENERGY = 200;
@@ -29,7 +30,7 @@ public abstract class SpaceShip {
 
 	/**
 	 * Ctor for the space ships , calls reset , sets random position and maximum
-	 * helath/energy
+	 * health/energy
 	 * 
 	 */
 	public SpaceShip() {
@@ -50,9 +51,7 @@ public abstract class SpaceShip {
 	 * Does the specific action of the ship (To be implemented by each
 	 * spaceship) all specific behavior of the ship (such as movement , shooting etc.)
 	 * should be implemented here.
-	 * 
-	 * @param game
-	 *            The game controller.
+	 * @param game The game controller.
 	 */
 	public abstract void doSpecificAction(SpaceWars game);
 
@@ -64,8 +63,7 @@ public abstract class SpaceShip {
 	 * of each ship , such * as moving , shooting etc.
 	 * After this is done - energy is replenished
 	 * 
-	 * @param game
-	 *            the game object to which this ship belongs.
+	 * @param game The game object to which this ship belongs.
 	 */
 	public void doAction(SpaceWars game) {
 		shotsTurnCounter--;
@@ -78,15 +76,13 @@ public abstract class SpaceShip {
 	 * Gets the image of this ship. This method should return the image of the
 	 * ship with or without the shield. This will be displayed on the GUI at the
 	 * end of the round
-	 * 
-	 * @return the image of the ship.
+	 * @return The image of the ship.
 	 */
 	public abstract Image getImage();
 
 	/**
 	 * Gets the physics object that controls this ship.
-	 * 
-	 * @return the physics object that controls the ship.
+	 * @return The physics object that controls the ship.
 	 */
 	public SpaceShipPhysics getPhysics() {
 		return pos;
@@ -102,7 +98,6 @@ public abstract class SpaceShip {
 
 	/**
 	 * Checks if this ship is dead.
-	 * 
 	 * @return true if the ship is dead. false otherwise.
 	 */
 	public boolean isDead() {
@@ -125,7 +120,6 @@ public abstract class SpaceShip {
 
 	/**
 	 * Activates the shield (if there is enough energy)
-	 * 
 	 */
 	public void activateShield() {
 		if (energy >= SHIELD_ENERGY) {
@@ -136,7 +130,6 @@ public abstract class SpaceShip {
 
 	/**
 	 * Fires the main cannon in the direction of pos
-	 * 
 	 */
 	protected void fire(SpaceWars game) {
 		if (energy >= SHOT_ENERGY && shotsTurnCounter <= 0) {
@@ -148,7 +141,6 @@ public abstract class SpaceShip {
 
 	/**
 	 * Teleports the ship
-	 * 
 	 */
 	public void Teleport() {
 		if (energy >= TEL_ENERGY) {

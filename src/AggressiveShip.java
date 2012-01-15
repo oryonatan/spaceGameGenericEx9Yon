@@ -1,11 +1,15 @@
-/**
- * AggressiveShip , pursue enemy and attemp to shoot him
- * 
- * @author yonatan idanb
+/** 
+ * FILE : AggressiveShip.java
+ * WRITER : Idan Brodet + idanbr2 + 300685278
+ * WRITER : Yonatan Oren
+ * EXERCISE : intro2cs ex9 2011-2012  
+ * DESCRIPTION:
+ * AggressiveShip, pursue enemy and attempt to shoot him.
  */
 public class AggressiveShip extends ComputerShip {
 
-	/* (non-Javadoc)
+	/* 
+	 * (non-Javadoc)
 	 * @see SpaceShip#doSpecificAction(SpaceWars)
 	 */
 	@Override

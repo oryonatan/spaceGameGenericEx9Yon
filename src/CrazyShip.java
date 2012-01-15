@@ -1,11 +1,19 @@
+/** 
+ * FILE : CrazyShip.java
+ * WRITER : Idan Brodet + idanbr2 + 300685278
+ * WRITER : Yonatan Oren
+ * EXERCISE : intro2cs ex9 2011-2012  
+ * DESCRIPTION:
+ * CrazyShip, the same as human controlled but in addition in each
+ * turn there is a 2 percent chance that it will try to teleport.
+ */
 import java.util.Random;
 
 public class CrazyShip extends HumanShip {
 	private static final double TELEPORT_RANDOM = 0.02;
 
-	/*
+	/**
 	 * (non-Javadoc)
-	 * 
 	 * @see HumanShip#doSpecificAction(SpaceWars)
 	 */
 	@Override

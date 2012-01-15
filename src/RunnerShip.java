@@ -1,12 +1,17 @@
+/** 
+ * FILE : RunnerShip.java
+ * WRITER : Idan Brodet + idanbr2 + 300685278
+ * WRITER : Yonatan Oren
+ * EXERCISE : intro2cs ex9 2011-2012  
+ * DESCRIPTION:
+ * Runner, ship tries to run away from combat and teleport if being aimed at.
+ */
 import intro.ex9.SpaceShipPhysics;
 
-/**Runner ship tries to run away from combat and teleport if being aimed at
- * @author idanb , yonatan
- *
- */
 public class RunnerShip extends ComputerShip {
 
-	/* (non-Javadoc)
+	/* 
+	 * (non-Javadoc)
 	 * @see SpaceShip#doSpecificAction(SpaceWars)
 	 */
 	@Override
@@ -16,7 +21,8 @@ public class RunnerShip extends ComputerShip {
 		spy(otherShip);	
 	}
 
-	/**Spies on another ship , tryes to teleport if the ship is close and aiming the cannon
+	/**
+	 * Spies on another ship , tryes to teleport if the ship is close and aiming the cannon
 	 * on the runner.
 	 * @param otherShip
 	 */

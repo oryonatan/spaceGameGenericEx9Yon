@@ -1,6 +1,10 @@
-/** AggressiveShip , pursue enemy and attempts to ram him
- * @author yonatan , idanb
- *
+/** 
+ * FILE : BasherShip.java
+ * WRITER : Idan Brodet + idanbr2 + 300685278
+ * WRITER : Yonatan Oren
+ * EXERCISE : intro2cs ex9 2011-2012  
+ * DESCRIPTION:
+ * BasherShip, pursue enemy and attempts to ram him.
  */
 public class BasherShip extends ComputerShip {
 

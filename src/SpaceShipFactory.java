@@ -1,13 +1,15 @@
+/**
+ * FILE : RunnerShip.java
+ * WRITER : Idan Brodet + idanbr2 + 300685278
+ * WRITER : Yonatan Oren
+ * EXERCISE : intro2cs ex9 2011-2012  
+ * DESCRIPTION:
+ * Factory for spaceships , has a single method that gets the user string and
+ * creates an array of spaceships.
+ */
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Factory for spaceships , has a single method that gets the user string and
- * creates an array of spaceships.
- * 
- * @author yonatan idanb
- * 
- */
 public class SpaceShipFactory {
 
 	/**

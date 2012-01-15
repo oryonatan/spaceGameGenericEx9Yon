@@ -1,13 +1,15 @@
+/** 
+ * FILE : BasherShip.java
+ * WRITER : Idan Brodet + idanbr2 + 300685278
+ * WRITER : Yonatan Oren
+ * EXERCISE : intro2cs ex9 2011-2012  
+ * DESCRIPTION:
+ * Abstract class for all the computer ships.
+ */
 import intro.ex9.GameGUI;
 import intro.ex9.SpaceShipPhysics;
 import java.awt.Image;
 
-/**
- * Abstract class for all the computer ships
- * 
- * @author yonatan,idanb
- * 
- */
 public abstract class ComputerShip extends SpaceShip {
 	/**
 	 * Types of movement interactions can be escape, or pursue
@@ -21,7 +23,6 @@ public abstract class ComputerShip extends SpaceShip {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see SpaceShip#getImage()
 	 */
 	public Image getImage() {
@@ -33,11 +34,8 @@ public abstract class ComputerShip extends SpaceShip {
 
 	/**
 	 * Moves the ship with an interaction relative to another ship
-	 * 
-	 * @param otherShip
-	 *            the ship to interact with
-	 * @param action
-	 *            the type of interaction : pursue or escape.
+	 * @param otherShip The ship to interact with
+	 * @param action The type of interaction : pursue or escape.
 	 */
 	protected void moveInteract(SpaceShip otherShip, Interaction action) {
 		SpaceShipPhysics otherPhysics = otherShip.getPhysics();

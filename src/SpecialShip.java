@@ -1,14 +1,19 @@
+/**
+ * FILE : SpecialShip.java
+ * WRITER : Idan Brodet + idanbr2 + 300685278
+ * WRITER : Yonatan Oren
+ * EXERCISE : intro2cs ex9 2011-2012  
+ * DESCRIPTION:
+ * Special ship - moves in loop and shoots 6 cannons in different directions 
+ * the shot delay was increased in order to reduce game difficulty.
+ */
 import intro.ex9.SpaceShipPhysics;
 
-/**Special ship - moves in loop and shoots 6 cannons in different directions 
- * the shot delay was increased in order to reduce game difficulty. 
- * @author yonatan idanb
- *
- */
 public class SpecialShip extends ComputerShip {
 	private static final int SHOTS_DELAY = 24;
-	/**Holds the cannons , represented as ExtendablePhysics objects
-	 * 
+	
+	/**
+	 * Holds the cannons , represented as ExtendablePhysics objects
 	 */
 	private ExtendablePhysics[] cannonsPhysics = { new ExtendablePhysics(),
 			new ExtendablePhysics(),
@@ -22,7 +27,8 @@ public class SpecialShip extends ComputerShip {
 	 */
 	@Override
 	public void doSpecificAction(SpaceWars game) {
-		pos.move(true, LEFT);
+		SpaceShip otherShip = game.getClosestShipTo(this);
+		moveInteract(otherShip, Interaction.escape);
 		//Direct all cannons
 		double angleDif = Math.PI / 3 ;
 		for (int i = 0; i < cannonsPhysics.length; i++) {
