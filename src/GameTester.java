@@ -50,22 +50,26 @@ private static final int MAX_HEALTH = 10;
 		}
 	}
 
+	/**
+	 * Tests what happens when the ship is hit shoots 10 missiles to the ship ,
+	 * and collides its 10 times
+	 */
 	private void testHits() {
 		SpaceShip enterprise = new HumanShip();
 		for (int health = 0; health < MAX_HEALTH; health++) {
 			enterprise.gotHit();
 		}
-		if (!enterprise.isDead()){
+		if (!enterprise.isDead()) {
 			reportError(SHIP_NOT_DEAD_SHOTS, ErrorTypes.normalError);
 		}
 		enterprise.reset();
 		for (int health = 0; health < MAX_HEALTH; health++) {
 			enterprise.collidedWithAnotherShip();
 		}
-		if (!enterprise.isDead()){
+		if (!enterprise.isDead()) {
 			reportError(SHIP_NOT_DEAD_COLLISIONS, ErrorTypes.normalError);
 		}
-		
+
 	}
 
 	private void testPhysics() {
