@@ -10,7 +10,7 @@ import intro.ex9.*;
 import java.awt.Image;
 
 public abstract class SpaceShip {
-	
+
 	private static final int SHIELD_ENERGY = 3;
 	private static final int SHOT_ENERGY = 25;
 	private static final int TEL_ENERGY = 150;
@@ -47,23 +47,27 @@ public abstract class SpaceShip {
 			health--;
 		}
 	}
-	
+
 	/**
 	 * Does the specific action of the ship (To be implemented by each
-	 * spaceship) all specific behavior of the ship (such as movement , shooting etc.)
-	 * should be implemented here.
-	 * @param game The game controller.
+	 * spaceship) all specific behavior of the ship (such as movement , shooting
+	 * etc.) should be implemented here.
+	 * 
+	 * @param game
+	 *            The game controller.
 	 */
 	public abstract void doSpecificAction(SpaceWars game);
 
 	/**
 	 * Does the actions of this ship for this round. This is called once per
-	 * round by the SpaceWars game driver. 
-	 * The method by itself only lowers the shoot delay counter , turns of the shield and then 
-	 * Calls the doSpecificAction(game) method of the ship which handles the special behavior 
-	 * of each ship , such * as moving , shooting etc.
-	 * After this is done - energy is replenished.
-	 * @param game The game object to which this ship belongs.
+	 * round by the SpaceWars game driver. The method by itself only lowers the
+	 * shoot delay counter , turns of the shield and then Calls the
+	 * doSpecificAction(game) method of the ship which handles the special
+	 * behavior of each ship , such * as moving , shooting etc. After this is
+	 * done - energy is replenished.
+	 * 
+	 * @param game
+	 *            The game object to which this ship belongs.
 	 */
 	public void doAction(SpaceWars game) {
 		shotsTurnCounter--;
@@ -76,12 +80,14 @@ public abstract class SpaceShip {
 	 * Gets the image of this ship. This method should return the image of the
 	 * ship with or without the shield. This will be displayed on the GUI at the
 	 * end of the round.
+	 * 
 	 * @return The image of the ship.
 	 */
 	public abstract Image getImage();
 
 	/**
 	 * Gets the physics object that controls this ship.
+	 * 
 	 * @return The physics object that controls the ship.
 	 */
 	public SpaceShipPhysics getPhysics() {
@@ -93,11 +99,14 @@ public abstract class SpaceShip {
 	 * gets hit by a shot.
 	 */
 	public void gotHit() {
-		health--;
+		if (!shieldsUp) {
+			health--;
+		}
 	}
 
 	/**
 	 * Checks if this ship is dead.
+	 * 
 	 * @return true if the ship is dead. false otherwise.
 	 */
 	public boolean isDead() {
