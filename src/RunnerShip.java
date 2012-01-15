@@ -4,7 +4,7 @@
  * WRITER : Yonatan Oren
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
- * Runner, ship tries to run away from combat and teleport if being aimed at.
+ * Runner ship, tries to run away from combat and teleport if being aimed at.
  */
 import intro.ex9.SpaceShipPhysics;
 

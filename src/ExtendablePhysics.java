@@ -5,7 +5,7 @@
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
  * Extension to the physics , allows interaction with the location of the 
- * physics object and with the angle
+ * physics object and with the angle.
  */
 import intro.ex9.SpaceShipPhysics;
 

@@ -4,7 +4,7 @@
  * WRITER : Yonatan Oren
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
- * CrazyShip, the same as human controlled but in addition in each
+ * Crazy ship, the same as human controlled but in addition in each
  * turn there is a 2 percent chance that it will try to teleport.
  */
 import java.util.Random;

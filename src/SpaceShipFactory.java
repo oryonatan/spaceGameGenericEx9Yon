@@ -13,11 +13,9 @@ import java.util.Map;
 public class SpaceShipFactory {
 
 	/**
-	 * Creates a list of spaceships
-	 * 
-	 * @param args
-	 *            - from user args
-	 * @return a list of spaceships
+	 * Creates a list of spaceships 
+	 * @param args From user args
+	 * @return A list of spaceships
 	 */
 	public static SpaceShip[] createSpaceShips(String[] args) {
 		// Map ship classes to string

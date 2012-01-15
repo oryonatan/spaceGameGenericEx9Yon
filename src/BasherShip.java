@@ -4,11 +4,12 @@
  * WRITER : Yonatan Oren
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
- * BasherShip, pursue enemy and attempts to ram him.
+ * Basher ship, pursue enemy and attempts to ram him.
  */
 public class BasherShip extends ComputerShip {
 
-	/* (non-Javadoc)
+	/* 
+	 * (non-Javadoc)
 	 * @see SpaceShip#doSpecificAction(SpaceWars)
 	 */
 	public void doSpecificAction(SpaceWars game) {

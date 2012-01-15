@@ -4,14 +4,15 @@
  * WRITER : Yonatan Oren
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
- * Human player ship extends the spaceship with support for user input.
+ * Human player ship, extends the spaceship with support for user input.
  */
 import intro.ex9.GameGUI;
 import java.awt.Image;
 
 public class HumanShip extends SpaceShip {
 	
-	/* (non-Javadoc)
+	/* 
+	 * (non-Javadoc)
 	 * @see SpaceShip#doSpecificAction(SpaceWars)
 	 */
 	@Override
@@ -30,7 +31,8 @@ public class HumanShip extends SpaceShip {
 		if (gui.isDPressed()) { fire(game);	}
 	}
 
-	/* (non-Javadoc)
+	/* 
+	 * (non-Javadoc)
 	 * @see SpaceShip#getImage()
 	 */
 	@Override

@@ -4,7 +4,7 @@
  * WRITER : Yonatan Oren
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
- * Special ship - moves in loop and shoots 6 cannons in different directions 
+ * Special ship, tries to run away from combat and shoots 6 cannons in different directions 
  * the shot delay was increased in order to reduce game difficulty.
  */
 import intro.ex9.SpaceShipPhysics;

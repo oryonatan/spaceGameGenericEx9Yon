@@ -4,7 +4,7 @@
  * WRITER : Yonatan Oren
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
- * FloaterShip , floats in a constant speed and does nothing
+ * Floater ship, floats in a constant speed and does nothing.
  */
 public class FloaterShip extends ComputerShip {
 

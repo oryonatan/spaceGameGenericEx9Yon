@@ -4,7 +4,7 @@
  * WRITER : Yonatan Oren
  * EXERCISE : intro2cs ex9 2011-2012  
  * DESCRIPTION:
- * AggressiveShip, pursue enemy and attempt to shoot him.
+ * Aggressive ship, pursue enemy and attempt to shoot him.
  */
 public class AggressiveShip extends ComputerShip {
 
