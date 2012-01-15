@@ -9,8 +9,6 @@ private static final String SHIP_NOT_DEAD_SHOTS = "Ship did not die after 10 sho
 private static final int STACK_CALLING_FUNCTION_LOCATION = 2;
 private static final String NORMAL_REPORT =  "Error in :%s\n%s";
 private static final int MAX_HEALTH = 10;
-
-
  
 	/**
 	 * @param args
@@ -106,8 +104,41 @@ private static final int MAX_HEALTH = 10;
 	}
 
 	private void testFactory() {
-		// TODO Auto-generated method stub
-		
+		String[] shipsArray = {"h", "c", "a", "b", "f", "r", "s"};
+		SpaceShip[] ships =  SpaceShipFactory.createSpaceShips(shipsArray);
+		if (shipsArray.length != ships.length) {
+			reportError("Create only " + ships.length + "ships instead of " + shipsArray.length + " ships",
+					ErrorTypes.normalError);
+			return;
+		}
+		if (!(ships[0] instanceof HumanShip)) {
+			reportError("Create other spaceShip instead of HumanShip",
+					ErrorTypes.normalError);
+		}
+		if (!(ships[1] instanceof CrazyShip)) {
+			reportError("Create other spaceShip instead of CrazyShip",
+					ErrorTypes.normalError);
+		}
+		if (!(ships[2] instanceof AggressiveShip)) {
+			reportError("Create other spaceShip instead of AggressiveShip",
+					ErrorTypes.normalError);
+		}
+		if (!(ships[3] instanceof BasherShip)) {
+			reportError("Create other spaceShip instead of BasherShip",
+					ErrorTypes.normalError);
+		}
+		if (!(ships[4] instanceof FloaterShip)) {
+			reportError("Create other spaceShip instead of FloaterShip",
+					ErrorTypes.normalError);
+		}
+		if (!(ships[5] instanceof RunnerShip)) {
+			reportError("Create other spaceShip instead of RunnerShip",
+					ErrorTypes.normalError);
+		}
+		if (!(ships[6] instanceof SpecialShip)) {
+			reportError("Create other spaceShip instead of SpecialShip",
+					ErrorTypes.normalError);
+		}
 	}
 
 }
