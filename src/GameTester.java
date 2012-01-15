@@ -1,3 +1,5 @@
+import java.awt.Image;
+
 public class GameTester {
 private static final String EXPHY_ANGLE_WRONG = "Extended physics Angle is wrong";
 private static final String EXPHY_Y_WRONG = "Extended physics x is wrong";
@@ -16,10 +18,28 @@ private static final int MAX_HEALTH = 10;
 	public static void main(String[] args) {
 		GameTester tester = new GameTester();
 		tester.testFactory();
-		tester.testPhysics();
+		tester.testExPhysics();
 		tester.testHits();
+		tester.testInterShipaction();
 	}
 	
+	private void testInterShipaction() {
+		SpaceShip enterprise = new SpaceShip() {
+			
+			@Override
+			public Image getImage() {
+				return null;
+			}
+			
+			@Override
+			public void doSpecificAction(SpaceWars game) {
+			}
+		};
+		SpaceShip serenity = new RunnerShip();		
+		double angle = serenity.getPhysics().angleTo(enterprise.getPhysics()); 
+		
+	}
+
 	/**Lists of error types
 	 *
 	 */
@@ -69,7 +89,7 @@ private static final int MAX_HEALTH = 10;
 		}
 	}
 
-	private void testPhysics() {
+	private void testExPhysics() {
 		ExtendablePhysics exPhy =  new ExtendablePhysics();
 		exPhy.setLocation(0, 0);
 		if(exPhy.getX()!= 0){
