@@ -1,0 +1,92 @@
+idanbr2
+300685278
+Idan Brodet
+
+oryonatan
+300704327
+Yonatan Oren
+
+=============================
+=  README for ex9: Space Wars  =
+=============================
+
+==================
+=  Description:  =
+==================
+
+* SpaceShipFactory: This is the factory of the game , it gets the args string from the calling user
+                    and generates a list of spaceships.
+                    The factory is implemented using a map between strings (args) to SpaceShips.
+
+* SpaceShip:        Abstract class for spaceships , it tmplements the following methods :
+                    collidedWithAnotherShip()
+                    doAction(SpaceWars)
+                    getPhysics()
+                    gotHit()
+                    isDead()
+                    reset()
+                    activateShield()
+                    Teleport()
+                    fire(SpaceWars)
+                    The doAction is calling the abstract method doSpecificAction , which should be implemted 
+                    for each inhering spaceship, while the doAction does the general maintanance actions, 
+                    such as lowering the shield and replenishing the energy. the doSpecificAction should 
+                    implement the actual specific actions made by each ship type.
+
+* HumanShip:        The basic human spaceship , extends SpaceShip , and contains user input handling as the 
+
+* CrazyShip:        Crazy human ship , extends humanship , but randomly tries to teleport in 2% chance.
+
+* ComputerShip:     Abstract class for the computer ship , implements the images , and the movemnt interactions 
+                    between two computer ships (either pursue or escape).
+
+* AggressiveShip:   A computer ship that pursue and shoot.
+
+* BasherShip:       A computer ship that tries to ram.
+
+* FloaterShip:      A computer ship that floats around.
+
+* RunnerShip:       An evasive computer ship that tries to escape from all the other ships.
+
+* SpecialShip:      A special computer ship , it has 6 physics objects (5 of them extended) which 
+                    shoots all the time in star shape. the ship behaves as a runner in movement.
+                    in order to make the game a bit more fair , it shoots slower.
+
+* ExtendablePhysics: An extended class that inherits from SpaceShipPhysics , in order to allow 
+                    changes to the location and angle of the object.
+
+* GameTester:       Tester for the game , it tests the the ships, the factory and the ExtendablePhysics class.
+
+=============================
+=  List of submitted files: =
+=============================
+
+* README                    This file.
+
+* SpaceShipFactory.java     Factory for spaceships , has a single method that gets the user string and
+                            creates an array of spaceships.
+
+* SpaceShip.java            Abstract class for all the space ships.
+
+* HumanShip.java            Human player ship, extends the spaceship with support for user input.
+
+* ComputerShip.java         Abstract class for all the computer ships.
+
+* AggressiveShip.java       Aggressive ship, pursue enemy and attempt to shoot him.
+
+* BasherShip.java           Basher ship, pursue enemy and attempts to ram him.
+
+* CrazyShip.java            Crazy ship, the same as human controlled but in addition in each
+                            turn there is a 2 percent chance that it will try to teleport.
+
+* FloaterShip.java          Floater ship, floats in a constant speed and does nothing.
+
+* RunnerShip.java           Runner ship, tries to run away from combat and teleport if being aimed at.
+
+* SpecialShip.java          Special ship, tries to run away from combat and shoots 6 cannons in different directions 
+                            the shot delay was increased in order to reduce game difficulty.
+
+* ExtendablePhysics.java    Extension to the physics , allows interaction with the location of the 
+                            physics object and with the angle.
+
+* GameTester.java           Tester for the game , tests ctor factory and spaceships.

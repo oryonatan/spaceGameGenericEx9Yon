@@ -1,3 +1,11 @@
+/** 
+ * FILE : GameTester.java
+ * WRITER : Idan Brodet + idanbr2 + 300685278
+ * WRITER : Yonatan Oren + oryonatan + 300704327
+ * EXERCISE : intro2cs ex9 2011-2012  
+ * DESCRIPTION:
+ * Tester for the game , tests ctor factory and spaceships.
+ */
 import intro.ex9.GameGUI;
 import intro.ex9.SpaceShipPhysics;
 
