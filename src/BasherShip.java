@@ -9,7 +9,7 @@
 public class BasherShip extends ComputerShip {
 
 	/* 
-	 * (non-Javadoc)
+	 * Pursue other ships , and try to ram her with shield on
 	 * @see SpaceShip#doSpecificAction(SpaceWars)
 	 */
 	public void doSpecificAction(SpaceWars game) {

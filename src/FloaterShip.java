@@ -9,7 +9,7 @@
 public class FloaterShip extends ComputerShip {
 
 	/*
-	 * (non-Javadoc)
+	 * Flies directly without ever changing 
 	 * @see SpaceShip#doSpecificAction(SpaceWars)
 	 */
 	@Override

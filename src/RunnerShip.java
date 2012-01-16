@@ -11,7 +11,7 @@ import intro.ex9.SpaceShipPhysics;
 public class RunnerShip extends ComputerShip {
 
 	/* 
-	 * (non-Javadoc)
+	 * Tries to escape other ships, using spying ability.
 	 * @see SpaceShip#doSpecificAction(SpaceWars)
 	 */
 	@Override

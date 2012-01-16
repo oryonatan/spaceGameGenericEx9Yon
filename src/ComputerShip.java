@@ -23,7 +23,7 @@ public abstract class ComputerShip extends SpaceShip {
 	protected final double SMALL_DISTANCE = 0.2;
 
 	/*
-	 * (non-Javadoc)
+	 * Returns the ship image
 	 * @see SpaceShip#getImage()
 	 */
 	public Image getImage() {

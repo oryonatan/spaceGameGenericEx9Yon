@@ -18,7 +18,7 @@ Yonatan Oren
                     and generates a list of spaceships.
                     The factory is implemented using a map between strings (args) to SpaceShips.
 
-* SpaceShip:        Abstract class for spaceships , it tmplements the following methods :
+* SpaceShip:        Abstract class for spaceships , it implements the following methods :
                     collidedWithAnotherShip()
                     doAction(SpaceWars)
                     getPhysics()
@@ -28,8 +28,8 @@ Yonatan Oren
                     activateShield()
                     Teleport()
                     fire(SpaceWars)
-                    The doAction is calling the abstract method doSpecificAction , which should be implemted 
-                    for each inhering spaceship, while the doAction does the general maintanance actions, 
+                    The doAction is calling the abstract method doSpecificAction , which should be implemented 
+                    for each inhering spaceship, while the doAction does the general maintenance actions, 
                     such as lowering the shield and replenishing the energy. the doSpecificAction should 
                     implement the actual specific actions made by each ship type.
 
@@ -37,7 +37,7 @@ Yonatan Oren
 
 * CrazyShip:        Crazy human ship , extends humanship , but randomly tries to teleport in 2% chance.
 
-* ComputerShip:     Abstract class for the computer ship , implements the images , and the movemnt interactions 
+* ComputerShip:     Abstract class for the computer ship , implements the images , and the movement interactions 
                     between two computer ships (either pursue or escape).
 
 * AggressiveShip:   A computer ship that pursue and shoot.

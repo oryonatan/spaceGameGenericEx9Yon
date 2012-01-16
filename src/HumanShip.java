@@ -12,7 +12,9 @@ import java.awt.Image;
 public class HumanShip extends SpaceShip {
 	
 	/* 
-	 * (non-Javadoc)
+	 * Handle user input , keys are T for teport , d for fire 
+	 * left to turn left , right to turn right arrowup to accelerate
+	 * s to shield.
 	 * @see SpaceShip#doSpecificAction(SpaceWars)
 	 */
 	@Override
@@ -32,7 +34,7 @@ public class HumanShip extends SpaceShip {
 	}
 
 	/* 
-	 * (non-Javadoc)
+	 * Sets the pictures.
 	 * @see SpaceShip#getImage()
 	 */
 	@Override

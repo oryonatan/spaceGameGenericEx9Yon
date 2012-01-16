@@ -14,6 +14,7 @@ public class CrazyShip extends HumanShip {
 	private static final double TELEPORT_RANDOM = 0.02;
 
 	/**
+	 * Acts as human and randomly teleports in 2% chance.
 	 * (non-Javadoc)
 	 * @see HumanShip#doSpecificAction(SpaceWars)
 	 */
